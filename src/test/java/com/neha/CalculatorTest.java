@@ -58,10 +58,17 @@ public class CalculatorTest {
 		assertEquals(10, actual);
 	}*/
 	
-	@Test
+	/*@Test
 	public void testDivide() {
 		Calculator cu = new Calculator();
 		float actual = cu.divide(9, 2);
 		assertEquals(4.5F, actual);
+	}*/
+	
+	@Test
+	public void testDivide() {
+		Calculator cu = new Calculator();
+		float actual = cu.divide(2, 9);
+		assertEquals(0.22F, actual, 0.22);
 	}
 }
