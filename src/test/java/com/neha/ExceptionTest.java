@@ -20,6 +20,6 @@ public class ExceptionTest {
 			exceptions.divide(10, 0);
 		});
 		
-		assertEquals("cannot divide by zero", exce.getMessage());
+		assertEquals("Cannot divide by zero", exce.getMessage());
 	}
 }
