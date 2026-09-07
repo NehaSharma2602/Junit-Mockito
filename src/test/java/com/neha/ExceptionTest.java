@@ -1,5 +1,6 @@
 package com.neha;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -15,8 +16,10 @@ public class ExceptionTest {
 	}
 	@Test
 	public void testDivideByZero() {
-		assertThrows(ArithmeticException.class, () -> {
+		ArithmeticException exce = assertThrows(ArithmeticException.class, () -> {
 			exceptions.divide(10, 0);
 		});
+		
+		assertEquals("cannot divide by zero", exce.getMessage());
 	}
 }
